@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.android.alarmclock">
 
-    <original-package android:name="com.android.alarmclock" />
+    <original-package android:name="com.android.betterAlarm" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -13,7 +13,7 @@
     <application android:label="@string/app_label"
                  android:icon="@drawable/ic_launcher_alarmclock">
 
-        <provider android:name="AlarmProvider" android:authorities="com.android.alarmclock" />
+        <provider android:name="AlarmProvider" android:authorities="com.android.betterAlarm" />
 
         <activity android:name="AlarmClock" android:label="@string/app_label"
                 android:configChanges="orientation|keyboardHidden|keyboard|navigation">

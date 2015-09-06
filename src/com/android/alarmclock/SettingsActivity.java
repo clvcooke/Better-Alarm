@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.alarmclock;
+package com.android.betterAlarm;
 
 import android.content.SharedPreferences;
 import android.media.AudioManager;
