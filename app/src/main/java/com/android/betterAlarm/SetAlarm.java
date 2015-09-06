@@ -112,12 +112,12 @@ public class SetAlarm extends PreferenceActivity
         getListView().setItemsCanFocus(true);
 
         // Grab the content view so we can modify it.
-        FrameLayout content = (FrameLayout) getWindow().getDecorView()
-                .findViewById(com.android.internal.R.id.content);
+//        FrameLayout content = (FrameLayout) getWindow().getDecorView()
+//                .findViewById(R.id.content);
 
         // Get the main ListView and remove it from the content view.
         ListView lv = getListView();
-        content.removeView(lv);
+       // content.removeView(lv);
 
         // Create the new LinearLayout that will become the content view and
         // make it vertical.

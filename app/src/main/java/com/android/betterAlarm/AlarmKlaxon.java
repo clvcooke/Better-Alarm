@@ -29,7 +29,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.os.Vibrator;
+//import android.os.Vibrator;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
@@ -45,7 +45,7 @@ public class AlarmKlaxon extends Service {
     private static final long[] sVibratePattern = new long[] { 500, 500 };
 
     private boolean mPlaying = false;
-    private Vibrator mVibrator;
+    //private Vibrator mVibrator;
     private MediaPlayer mMediaPlayer;
     private Alarm mCurrentAlarm;
     private long mStartTime;
@@ -85,7 +85,9 @@ public class AlarmKlaxon extends Service {
 
     @Override
     public void onCreate() {
-        mVibrator = new Vibrator();
+
+        //TODO fix
+       // mVibrator = new Vibrator();
         // Listen for incoming calls to kill the alarm.
         mTelephonyManager =
                 (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
@@ -202,8 +204,8 @@ public class AlarmKlaxon extends Service {
                 try {
                     // Must reset the media player to clear the error state.
                     mMediaPlayer.reset();
-                    setDataSourceFromResource(getResources(), mMediaPlayer,
-                            com.android.internal.R.raw.fallbackring);
+//                    setDataSourceFromResource(getResources(), mMediaPlayer,
+//                            com.android.internal.R.raw.fallbackring);
                     startAlarm(mMediaPlayer);
                 } catch (Exception ex2) {
                     // At this point we just don't play anything.
@@ -213,11 +215,11 @@ public class AlarmKlaxon extends Service {
         }
 
         /* Start the vibrator after everything is ok with the media player */
-        if (alarm.vibrate) {
-            mVibrator.vibrate(sVibratePattern, 0);
-        } else {
-            mVibrator.cancel();
-        }
+//        if (alarm.vibrate) {
+//            mVibrator.vibrate(sVibratePattern, 0);
+//        } else {
+//            mVibrator.cancel();
+//        }
 
         enableKiller(alarm);
         mPlaying = true;
@@ -266,7 +268,7 @@ public class AlarmKlaxon extends Service {
             }
 
             // Stop vibrator
-            mVibrator.cancel();
+            //mVibrator.cancel();
         }
         disableKiller();
     }

@@ -14,7 +14,8 @@
      limitations under the License.
 -->
 
-<com.android.alarmclock.DigitalClock android:id="@+id/clock"
+<com.android.betterAlarm.DigitalClock
+    android:id="@+id/clock"
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/clock"
     android:gravity="center">
@@ -49,5 +50,5 @@
             android:includeFontPadding="false"
             android:textSize="28sp"/>
     </LinearLayout>
-</com.android.alarmclock.DigitalClock>
+</com.android.betterAlarm.DigitalClock>
 <!-- From: file:/D:/Android/Better-Alarm/app/src/main/res/layout/digital_clock.xml -->

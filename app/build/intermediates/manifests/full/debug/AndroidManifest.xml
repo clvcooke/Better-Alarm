@@ -15,11 +15,11 @@
         android:icon="@drawable/ic_launcher_alarmclock"
         android:label="@string/app_label" >
         <provider
-            android:name="com.android.alarmclock.AlarmProvider"
-            android:authorities="com.android.alarmclock" />
+            android:name="com.android.betterAlarm.AlarmProvider"
+            android:authorities="com.android.betterAlarm" />
 
         <activity
-            android:name="com.android.alarmclock.AlarmClock"
+            android:name="com.android.betterAlarm.AlarmClock"
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
             android:label="@string/app_label" >
             <intent-filter>
@@ -30,18 +30,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.alarmclock.SettingsActivity"
+            android:name="com.android.betterAlarm.SettingsActivity"
             android:label="@string/settings" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.alarmclock.SetAlarm"
+            android:name="com.android.betterAlarm.SetAlarm"
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
             android:label="@string/set_alarm" />
         <activity
-            android:name="com.android.alarmclock.AlarmAlert"
+            android:name="com.android.betterAlarm.AlarmAlert"
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
@@ -54,15 +54,15 @@
              with the wallpaper background.
         -->
         <activity
-            android:name="com.android.alarmclock.AlarmAlertFullScreen"
+            android:name="com.android.betterAlarm.AlarmAlertFullScreen"
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:taskAffinity=""
             android:theme="@android:style/Theme.Wallpaper.NoTitleBar" />
-        <activity android:name="com.android.alarmclock.ClockPicker" />
+        <activity android:name="com.android.betterAlarm.ClockPicker" />
 
-        <receiver android:name="com.android.alarmclock.AlarmReceiver" >
+        <receiver android:name="com.android.betterAlarm.AlarmReceiver" >
             <intent-filter>
                 <action android:name="com.android.alarmclock.ALARM_ALERT" />
                 <action android:name="alarm_killed" />
@@ -78,13 +78,13 @@
              This allows the alert to continue playing even if another activity
              causes the AlarmAlert activity to pause.
         -->
-        <service android:name="com.android.alarmclock.AlarmKlaxon" >
+        <service android:name="com.android.betterAlarm.AlarmKlaxon" >
             <intent-filter>
                 <action android:name="com.android.alarmclock.ALARM_ALERT" />
             </intent-filter>
         </service>
 
-        <receiver android:name="com.android.alarmclock.AlarmInitReceiver" >
+        <receiver android:name="com.android.betterAlarm.AlarmInitReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.TIME_SET" />
@@ -93,8 +93,8 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.android.alarmclock.AnalogAppWidgetProvider"
-            android:icon="@drawable/ic_widget_analog_clock"
+            android:name="com.android.betterAlarm.AnalogAppWidgetProvider"
+            android:icon="@drawable/icon_"
             android:label="@string/analog_gadget" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

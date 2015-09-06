@@ -458,10 +458,12 @@ public class Alarms {
     /**
      * Tells the StatusBar whether the alarm is enabled or disabled
      */
+    
+    //TODO // FIXME: 9/6/2015 
     private static void setStatusBarIcon(Context context, boolean enabled) {
-        Intent alarmChanged = new Intent(Intent.ACTION_ALARM_CHANGED);
-        alarmChanged.putExtra("alarmSet", enabled);
-        context.sendBroadcast(alarmChanged);
+        //Intent alarmChanged = new Intent(Intent.ACTION_ALARM_CHANGED);
+        //alarmChanged.putExtra("alarmSet", enabled);
+        //context.sendBroadcast(alarmChanged);
     }
 
     /**
